@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>405 - Метод не разрешен</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff4757, #ff6b6b);
+            background-size: 400% 400%;
+            color: #302e2e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            animation: backgroundAnimation 15s ease infinite;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 6em;
+            margin: 0;
+            animation: shake 0.5s infinite;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            max-width: 600px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animation {
+            font-size: 100px;
+            animation: bounce 1s infinite;
+            margin: 30px 0;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            background: #ff4757;
+            padding: 15px 30px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+            font-size: 1.2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        a:hover {
+            background: #ff6b6b;
+            transform: scale(1.1);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.8em;
+            color: #5c5555;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Эффект взрыва */
+        .explosion {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background: url('https://example.com/explosion.gif') no-repeat center; /* Замените на ваше изображение взрыва */
+            background-size: contain;
+            animation: explode 1.5s infinite;
+        }
+
+        @keyframes explode {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; transform: scale(1.1); }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="explosion"></div>
+    <h1>405</h1>
+    <p>Метод не разрешен. Пожалуйста, проверьте используемый метод запроса и попробуйте снова.</p>
+    <img src="giphy.webp" alt="Animated webp" style="width: 300px; margin: 20px 0;">
+    <a href="/">Вернуться на главную</a>
+</body>
+</html>
